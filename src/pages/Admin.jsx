@@ -72,6 +72,13 @@ const leadStatusOptions = [
   { value: "closed", label: "Đã đóng" },
 ];
 
+const leadSheetSyncLabels = {
+  pending: "Đang đồng bộ",
+  sent: "Đã gửi Google Sheet",
+  skipped: "Chưa cấu hình Google Sheet",
+  error: "Lỗi đồng bộ Google Sheet",
+};
+
 const defaultCourseImage =
   "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80";
 
@@ -253,6 +260,8 @@ export default function Admin() {
       "Nội dung tư vấn",
       "Nguồn trang",
       "Trạng thái",
+      "Google Sheet",
+      "Lỗi Google Sheet",
       "Ghi chú",
     ];
     const rows = leads.map((lead) => [
@@ -264,6 +273,8 @@ export default function Admin() {
       lead.message,
       lead.source,
       statusLabels[lead.status] || lead.status,
+      leadSheetSyncLabels[lead.sheetSyncStatus] || lead.sheetSyncStatus || "",
+      lead.sheetSyncError || "",
       lead.note,
     ]);
     const csv = [headers, ...rows].map((row) => row.map(csvCell).join(",")).join("\n");
@@ -629,6 +640,9 @@ export default function Admin() {
                             <span className="rounded-full bg-skybrand/10 px-3 py-1 text-xs font-bold text-skybrand">
                               {statusLabels[lead.status] || lead.status}
                             </span>
+                            <span className="rounded-full bg-leaf/10 px-3 py-1 text-xs font-bold text-leaf">
+                              {leadSheetSyncLabels[lead.sheetSyncStatus] || "Chưa đồng bộ Sheet"}
+                            </span>
                           </div>
                           <div className="mt-4 grid gap-2 text-sm leading-6 text-slate-700 md:grid-cols-2">
                             <p>
@@ -646,7 +660,16 @@ export default function Admin() {
                             <p>
                               <strong>Nguồn:</strong> {lead.source}
                             </p>
+                            <p>
+                              <strong>Google Sheet:</strong>{" "}
+                              {leadSheetSyncLabels[lead.sheetSyncStatus] || "Chưa đồng bộ Sheet"}
+                            </p>
                           </div>
+                          {lead.sheetSyncError && (
+                            <p className="mt-4 rounded-lg bg-red-50 p-4 text-sm leading-7 text-red-600">
+                              {lead.sheetSyncError}
+                            </p>
+                          )}
                           {lead.message && (
                             <p className="mt-4 rounded-lg bg-slate-50 p-4 text-sm leading-7 text-muted">
                               {lead.message}

@@ -43,6 +43,9 @@ export function addLead(lead) {
     source: lead.source || window.location.pathname,
     status: "new",
     note: "",
+    sheetSyncStatus: lead.sheetSyncStatus || "pending",
+    sheetSyncedAt: "",
+    sheetSyncError: "",
     createdAt,
     updatedAt: createdAt,
   };
