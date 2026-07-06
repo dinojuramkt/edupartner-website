@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #ffffff;
+    color: #1e293b;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(41, 171, 226, 0.24);
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    outline-color: #29abe2;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-normal text-navy sm:text-4xl;
+  }
+
+  .section-lead {
+    @apply mt-4 max-w-3xl text-base leading-8 text-muted sm:text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-skybrand px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skybrand;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-leaf px-6 py-3 text-sm font-semibold text-leaf transition hover:bg-leaf hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf;
+  }
+
+  .card {
+    @apply rounded-lg border border-slate-100 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .hero-slider-title {
+    letter-spacing: 0px !important;
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-slider-inner {
+    padding-bottom: 0 !important;
+  }
+
+  .hero-slider-visual {
+    position: absolute !important;
+    top: 0 !important;
+    right: 2rem !important;
+    bottom: 0 !important;
+    display: flex !important;
+    width: 48% !important;
+    max-width: 700px !important;
+    margin: 0 !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+
+  .hero-slider-stage {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  .hero-slider-image {
+    bottom: 0 !important;
+    height: 620px !important;
+    max-height: 96% !important;
+    max-width: 112% !important;
+  }
+
+  .hero-slider-controls {
+    position: absolute !important;
+    right: 2rem !important;
+    bottom: 2rem !important;
+    left: 2rem !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-slider-visual {
+    right: 2.5rem !important;
+    width: 50% !important;
+  }
+
+  .hero-slider-image {
+    height: 700px !important;
+    max-width: 118% !important;
+  }
+}
