@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { courses as defaultCourses } from "../data/courses.js";
 import { posts as defaultPosts } from "../data/posts.js";
 import { getCustomCourses, getCustomPosts, UPDATE_EVENT } from "../utils/contentStorage.js";
+import { createCoursePosts } from "../utils/coursePostFactory.js";
 
 const defaultConsultationSteps = [
   "Gửi thông tin tư vấn cho Edupartner.",
@@ -76,8 +77,12 @@ export function useContent() {
   );
 
   const posts = useMemo(
-    () => [...customPosts.map(enrichPost), ...defaultPosts.map(enrichPost)],
-    [customPosts],
+    () => [
+      ...customPosts.map(enrichPost),
+      ...createCoursePosts(courses).map(enrichPost),
+      ...defaultPosts.map(enrichPost),
+    ],
+    [courses, customPosts],
   );
 
   return {

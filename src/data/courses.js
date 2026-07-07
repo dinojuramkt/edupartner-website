@@ -190,7 +190,7 @@ const baseCourses = [
     duration: "Theo ngành và hệ đào tạo",
     format: "Tư vấn theo chương trình",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
   },
   {
     id: 11,
@@ -582,7 +582,7 @@ const supplementalCourses = [
     format: "Online / Offline",
     schedule: "Tư vấn theo lớp khai giảng",
     image:
-      "https://images.unsplash.com/photo-1554224154-26032fced8bd?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
     overview:
       "Chứng chỉ thẩm định giá giúp học viên tiếp cận phương pháp xác định giá trị tài sản, doanh nghiệp và ứng dụng kết quả thẩm định trong hoạt động tài chính, đầu tư, tín dụng hoặc quản trị.",
     outcomes: [

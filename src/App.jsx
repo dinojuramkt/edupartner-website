@@ -24,8 +24,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL || "/";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <div className="min-h-screen bg-white text-ink">
         <Header />

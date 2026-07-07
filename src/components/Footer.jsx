@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Clock, Globe2, Mail, MapPin, Phone } from "lucide-react";
 import { contactDetails } from "../data/contact.js";
+import { assetUrl } from "../utils/assetUrl.js";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
         <div>
           <img
             className="h-20 w-auto max-w-[220px] object-contain"
-            src="/assets/logo-white.png"
+            src={assetUrl("assets/logo-white.png")}
             alt="Edupartner"
           />
           <p className="mt-5 max-w-md text-sm leading-7 text-white/75">

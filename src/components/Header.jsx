@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, Phone, X } from "lucide-react";
+import { assetUrl } from "../utils/assetUrl.js";
 
 const navItems = [
   { label: "Trang chủ", path: "/" },
@@ -27,7 +28,7 @@ export default function Header() {
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
             className="h-12 w-auto max-w-[210px] object-contain sm:h-14 sm:max-w-[260px]"
-            src="/assets/logo-horizontal.png"
+            src={assetUrl("assets/logo-horizontal.png")}
             alt="Edupartner"
           />
         </Link>

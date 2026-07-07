@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { assetUrl } from "../utils/assetUrl.js";
 
 const heroSlides = [
   {
@@ -11,7 +12,7 @@ const heroSlides = [
     secondaryButtonText: "Tìm hiểu VEPT",
     primaryTo: "/lien-he",
     secondaryTo: "/khoa-hoc/luyen-thi-chung-chi-tieng-anh",
-    image: "/images/student-vept.png",
+    image: "images/student-vept.png",
     imageAlt: "Học viên trẻ đang học tiếng Anh cùng tài liệu ôn luyện",
     accent: "from-skybrand/20 via-white to-leaf/10",
   },
@@ -23,7 +24,7 @@ const heroSlides = [
     secondaryButtonText: "Xem chương trình tin học",
     primaryTo: "/lien-he",
     secondaryTo: "/khoa-hoc/chung-chi-ung-dung-cong-nghe-thong-tin",
-    image: "/images/student-computer.png",
+    image: "images/student-computer.png",
     imageAlt: "Học viên trẻ sử dụng laptop trong môi trường học tập hiện đại",
     accent: "from-leaf/15 via-white to-skybrand/20",
   },
@@ -35,7 +36,7 @@ const heroSlides = [
     secondaryButtonText: "Xem chương trình bồi dưỡng",
     primaryTo: "/lien-he",
     secondaryTo: "/khoa-hoc/chuan-chuc-danh-nghe-nghiep-giao-vien",
-    image: "/images/teacher-training.png",
+    image: "images/teacher-training.png",
     imageAlt: "Giáo viên chuyên nghiệp thân thiện trong lĩnh vực giáo dục",
     accent: "from-skybrand/15 via-[#F3FBF1] to-white",
   },
@@ -126,7 +127,7 @@ export default function HeroSlider() {
                       isActive ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
                     ].join(" ")}
                     key={slide.image}
-                    src={slide.image}
+                    src={assetUrl(slide.image)}
                     alt={slide.imageAlt}
                     aria-hidden={!isActive}
                   />

@@ -1,5 +1,35 @@
 const basePosts = [
   {
+    id: 7,
+    title: "VEPT Pearson là gì và ai nên lựa chọn bài thi này?",
+    category: "Tiếng Anh",
+    date: "01/07/2026",
+    description:
+      "Tìm hiểu bài thi Versant English Placement Test của Pearson, đối tượng phù hợp và cách chuẩn bị lộ trình ôn luyện hiệu quả.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    id: 8,
+    title: "Lộ trình học tin học văn phòng cho người mới bắt đầu",
+    category: "Tin học",
+    date: "26/06/2026",
+    description:
+      "Gợi ý cách xây dựng nền tảng tin học, luyện Word, Excel, PowerPoint và ứng dụng kỹ năng văn phòng vào học tập, công việc.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    id: 9,
+    title: "Học liên thông, văn bằng và đại học từ xa cần chuẩn bị gì?",
+    category: "Đào tạo dài hạn",
+    date: "24/06/2026",
+    description:
+      "Những thông tin người học nên chuẩn bị khi tìm hiểu chương trình liên thông, văn bằng hoặc đại học theo hình thức linh hoạt.",
+    image:
+      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80",
+  },
+  {
     id: 1,
     title: "Nên chọn chứng chỉ tiếng Anh nào phù hợp với mục tiêu học tập?",
     category: "Tiếng Anh",
@@ -62,6 +92,81 @@ const basePosts = [
 ];
 
 const postDetailsById = {
+  7: {
+    slug: "vept-pearson-la-gi-va-ai-nen-lua-chon",
+    content: [
+      {
+        heading: "VEPT Pearson phù hợp với nhu cầu đánh giá tiếng Anh nhanh gọn",
+        paragraphs: [
+          "VEPT Pearson là bài đánh giá năng lực tiếng Anh theo hình thức trực tuyến, thường được dùng để xác định trình độ đầu vào, phân lớp hoặc hỗ trợ hoàn thiện yêu cầu năng lực ngoại ngữ theo từng mục tiêu học tập.",
+          "Điểm mạnh của dạng bài này là cấu trúc rõ ràng, thời lượng hợp lý và tập trung vào khả năng sử dụng tiếng Anh thực tế. Vì vậy, người học nên chuẩn bị theo lộ trình kỹ năng thay vì chỉ học mẹo làm bài.",
+        ],
+      },
+      {
+        heading: "Ai nên tìm hiểu chương trình VEPT?",
+        paragraphs: [
+          "Chương trình phù hợp với học viên cần đánh giá năng lực tiếng Anh, sinh viên chuẩn bị hồ sơ học tập, người đi làm cần bổ sung minh chứng năng lực hoặc người muốn có một lộ trình ôn tập tập trung hơn.",
+          "Trước khi bắt đầu, học viên nên được kiểm tra nền tảng, xác định mục tiêu điểm số và thời hạn cần hoàn thành để chọn cường độ học phù hợp.",
+        ],
+      },
+      {
+        heading: "Cách Edupartner hỗ trợ học viên",
+        paragraphs: [
+          "Edupartner tư vấn mục tiêu, định hướng tài liệu, hướng dẫn cách luyện nghe, nói, đọc hiểu và phản xạ tiếng Anh theo cấu trúc bài thi. Học viên được theo dõi tiến độ để điều chỉnh lộ trình khi cần.",
+        ],
+      },
+    ],
+  },
+  8: {
+    slug: "lo-trinh-hoc-tin-hoc-van-phong-cho-nguoi-moi-bat-dau",
+    content: [
+      {
+        heading: "Bắt đầu từ kỹ năng sử dụng máy tính nền tảng",
+        paragraphs: [
+          "Người mới học tin học văn phòng nên bắt đầu bằng các thao tác cơ bản như quản lý tệp, làm việc với thư mục, sử dụng trình duyệt, email và các công cụ lưu trữ tài liệu.",
+          "Khi nền tảng thao tác đã chắc, việc học Word, Excel và PowerPoint sẽ nhẹ hơn vì học viên hiểu cách tổ chức dữ liệu, định dạng tài liệu và xử lý công việc theo quy trình.",
+        ],
+      },
+      {
+        heading: "Ba nhóm kỹ năng nên ưu tiên",
+        paragraphs: [
+          "Với Word, học viên cần biết soạn thảo, căn chỉnh, tạo mục lục, bảng biểu và xuất tài liệu đúng chuẩn. Với Excel, nên tập trung vào nhập liệu, công thức cơ bản, lọc dữ liệu, biểu đồ và kiểm tra lỗi.",
+          "Với PowerPoint, mục tiêu không chỉ là tạo slide đẹp mà còn biết trình bày thông tin rõ ràng, nhất quán và phù hợp với bối cảnh học tập hoặc công việc.",
+        ],
+      },
+      {
+        heading: "Học để áp dụng ngay vào công việc",
+        paragraphs: [
+          "Một lộ trình hiệu quả cần có bài tập thực hành theo tình huống thực tế như lập bảng theo dõi, soạn văn bản hành chính, làm báo cáo và chuẩn bị bài trình chiếu. Edupartner định hướng chương trình theo nhu cầu sử dụng của từng học viên.",
+        ],
+      },
+    ],
+  },
+  9: {
+    slug: "hoc-lien-thong-van-bang-va-dai-hoc-tu-xa-can-chuan-bi-gi",
+    content: [
+      {
+        heading: "Xác định rõ mục tiêu học dài hạn",
+        paragraphs: [
+          "Trước khi chọn chương trình liên thông, văn bằng hoặc đại học từ xa, người học nên xác định mục tiêu chính: bổ sung bằng cấp, chuyển hướng nghề nghiệp, nâng chuẩn vị trí việc làm hay mở rộng cơ hội phát triển.",
+          "Mục tiêu càng rõ, việc chọn ngành, hình thức học và thời gian theo học càng sát với điều kiện cá nhân.",
+        ],
+      },
+      {
+        heading: "Chuẩn bị hồ sơ và quỹ thời gian",
+        paragraphs: [
+          "Người học nên kiểm tra bằng cấp hiện có, bảng điểm, giấy tờ cá nhân và các yêu cầu đầu vào của chương trình. Với hình thức học linh hoạt hoặc từ xa, khả năng tự quản lý thời gian cũng là yếu tố rất quan trọng.",
+          "Một kế hoạch học tập thực tế cần tính đến lịch làm việc, lịch gia đình, thời hạn nộp hồ sơ và các mốc học tập chính trong năm.",
+        ],
+      },
+      {
+        heading: "Vai trò của tư vấn trước khi đăng ký",
+        paragraphs: [
+          "Edupartner hỗ trợ người học rà soát nhu cầu, đối chiếu điều kiện đầu vào, tìm hiểu ngành học phù hợp và chuẩn bị thông tin cần thiết trước khi quyết định tham gia chương trình đào tạo dài hạn.",
+        ],
+      },
+    ],
+  },
   1: {
     slug: "nen-chon-chung-chi-tieng-anh-nao-phu-hop",
     content: [

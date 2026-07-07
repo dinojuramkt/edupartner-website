@@ -9,6 +9,21 @@
       name="description"
       content="Edupartner cung cấp chương trình tiếng Anh, tin học, đào tạo ngắn hạn và đào tạo dài hạn, hỗ trợ học viên lựa chọn lộ trình học phù hợp."
     />
+    <script>
+      (function (location) {
+        if (location.search[1] === "/") {
+          var decoded = location.search
+            .slice(1)
+            .split("&")
+            .map(function (item) {
+              return item.replace(/~and~/g, "&");
+            })
+            .join("?");
+
+          window.history.replaceState(null, null, location.pathname.slice(0, -1) + decoded + location.hash);
+        }
+      })(window.location);
+    </script>
   </head>
   <body>
     <div id="root"></div>
